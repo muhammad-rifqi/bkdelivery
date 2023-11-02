@@ -178,11 +178,16 @@
                 <div class="col-lg-9">
 
                     <div>
-                        <img src="https://media-order.bkdelivery.co.id/thumb/group_photo/2023/11/1/bhbpfq8oswcfk7rye5jnof_product_list.jpg"
+                        <img id="images" src=""
                             style="width: 100%;">
                     </div>
                     <br>
                     <div>
+                        <br>
+                        <h2 id="titles">
+                            
+                        </h2>
+                        <hr>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident aperiam dolorum velit
                             molestiae excepturi vel beatae eaque animi explicabo dicta. Omnis nulla at officia.
@@ -197,6 +202,12 @@
                             tempora cum in atque placeat.
                         </p>
                         <br>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident aperiam dolorum velit
+                            molestiae excepturi vel beatae eaque animi explicabo dicta. Omnis nulla at officia.
+                            Repellendus
+                            tempora cum in atque placeat.
+                        </p>
                     </div>
                     <br>
                 </div>
@@ -289,7 +300,15 @@
     <script src="js/mixitup.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
-
+    <script>
+        let url = new URL(window.location.href);
+        let id = url.searchParams.get('id');
+        let title = url.searchParams.get('title');
+        let image = url.searchParams.get('image');
+        document.getElementById("images").src = image;
+        document.getElementById("titles").innerHTML = title;
+        // document.getElementById("id").value = id;
+    </script>
 
 
 </body>
